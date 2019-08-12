@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_12_142939) do
+ActiveRecord::Schema.define(version: 2019_08_12_154529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 2019_08_12_142939) do
     t.string "category"
     t.integer "price"
     t.string "description"
-    t.bigint "escapist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "escapist_id"
     t.index ["escapist_id"], name: "index_dreams_on_escapist_id"
   end
 
@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 2019_08_12_142939) do
     t.index ["escapist_id"], name: "index_neurolinks_on_escapist_id"
   end
 
-  add_foreign_key "dreams", "escapists"
   add_foreign_key "neurolinks", "dreams"
   add_foreign_key "neurolinks", "escapists"
 end
