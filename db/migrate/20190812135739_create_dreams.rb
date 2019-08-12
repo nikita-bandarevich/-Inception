@@ -5,7 +5,6 @@ class CreateDreams < ActiveRecord::Migration[5.2]
       t.string :category
       t.integer :price
       t.string :description
-      t.references :escapist, foreign_key: true
 
       t.timestamps
     end
