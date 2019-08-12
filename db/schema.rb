@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_12_135739) do
+ActiveRecord::Schema.define(version: 2019_08_12_142939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,5 +38,19 @@ ActiveRecord::Schema.define(version: 2019_08_12_135739) do
     t.index ["reset_password_token"], name: "index_escapists_on_reset_password_token", unique: true
   end
 
+  create_table "neurolinks", force: :cascade do |t|
+    t.bigint "dream_id"
+    t.bigint "escapist_id"
+    t.integer "total_price"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dream_id"], name: "index_neurolinks_on_dream_id"
+    t.index ["escapist_id"], name: "index_neurolinks_on_escapist_id"
+  end
+
   add_foreign_key "dreams", "escapists"
+  add_foreign_key "neurolinks", "dreams"
+  add_foreign_key "neurolinks", "escapists"
 end
