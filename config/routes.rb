@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'neurolinks/new'
+  get 'neurolinks/create'
   # get 'dreams/index'
   # get 'dreams/new'
   # get 'dreams/create'
