@@ -1,1 +1,24 @@
 <h1>DREAM!</h1>
+<div class="container">
+  <%= render "shared/navbar"  %>
+    <div>
+      <h1> <%= @dream.title %></h1>
+      <h3> <%= @dream.category %></h3>
+
+    </div>
+    <img src="" alt="">
+
+    <div>
+      <h1> <%= @dream.title %></h1>
+      <h3> <%= @dream.description %></h3>
+    </div>
+
+    <%= @dream.found_on %>
+    <p><%= link_to 'Edit', edit_dream_path(@dream)  %></p>
+    <p><%= link_to 'Back home', dreams_path %></p>
+
+    <div class="footer-show">
+      <h2><%= @dream.price%></h2>
+      <p><%= link_to 'book', neurolink_new %></p>
+    </div>
+</div>
