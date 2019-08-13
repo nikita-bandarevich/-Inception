@@ -1,1 +1,8 @@
-<h1>DREAM!</h1>
+<h1>TESTING</h1>
+<h2>--<%= @dream.title %></h2>
+<h2>--<%= @dream.category %></h2>
+<h2>--<%= @dream.price %></h2>
+<h2>--<%= @dream.description %></h2>
+
+<%= link_to 'Edit', edit_dream_path(@dream) %> |
+<%= link_to 'Back', dreams_path %>

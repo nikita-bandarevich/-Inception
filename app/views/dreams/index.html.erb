@@ -1,2 +1,12 @@
-<h1>Dreams#index</h1>
-<p>Find me in app/views/dreams/index.html.erb</p>
+<h1>TESTING</h1>
+
+
+<% @dreams.each do |e| %>
+  <h2>--<%= e.title %></h2>
+  <%= image_tag e.image_url %>
+  <td><%= link_to 'Show', dream_path(e.id) %></td>
+  <td><%= link_to 'Edit', edit_dream_path(e) %></td>
+  <td><%= link_to 'Destroy', e, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
+
+<%= link_to 'New', new_dream_path %>
