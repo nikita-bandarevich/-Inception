@@ -13,7 +13,7 @@ class DreamsController < ApplicationController
   end
 
   def create
-    @dream = Dream.new(strong_params)
+    @dream = Dream.new(dream_strong_params)
     @dream.escapist_id = current_escapist
     if @dream.save
       redirect_to dreams_path
@@ -45,6 +45,6 @@ class DreamsController < ApplicationController
   end
 
   def dream_strong_params
-    params.require(:dream).permit(:title, :price, :category, :description)
+    params.require(:dream).permit(:title, :price, :category, :description, :image_url)
   end
 end
