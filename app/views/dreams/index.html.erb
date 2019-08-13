@@ -1,13 +1,16 @@
 <div class="container">
-  <h1>Dreams</h1>
+  <br>
+  <br>
+  <h3>Choose your dream:</h3>
+  <br>
   <div class="cards">
     <% @dreams.each do |d| %>
       <% url = d.photo.file.nil? ? image_url("bar-beverage-blur-338713.jpg") : cl_image_path(d.photo) %>
         <div class="card" onclick="dream_path(d.id) style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('<%= url %>')">
           <div class="card-content">
-            <h3><%= d.title  %></h3>
-            <h5><%= d.category %></h5>
-            <h5>$<%= d.price %></h5>
+            <h1><strong><%= d.title  %></strong> </h1>
+            <p><%= d.category %></p>
+            <p style="font-size: 33px">$<%= d.price %></p>
             <%= link_to 'Show', dream_path(d.id) %>
             <%= link_to 'Edit', edit_dream_path(d) %>
             <%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -15,7 +18,10 @@
         </div>
       <% end %>
     </div>
-<%= link_to 'New', new_dream_path %>
+    <br>
+    <%= link_to 'Create dream', new_dream_path %>
+    <br>
+    <br>
 </div>
 
 
