@@ -1,8 +1,24 @@
-<h1>TESTING</h1>
-<h2>--<%= @dream.title %></h2>
-<h2>--<%= @dream.category %></h2>
-<h2>--<%= @dream.price %></h2>
-<h2>--<%= @dream.description %></h2>
+<div class="container">
+    <div>
+      <h1> <%= @dream.title %></h1>
+      <p> <%= @dream.category %></p>
 
-<%= link_to 'Edit', edit_dream_path(@dream) %> |
-<%= link_to 'Back', dreams_path %>
+    </div>
+    <img src="" alt="">
+
+    <div>
+      <h1> <%= @dream.title %></h1>
+      <h3> <%= @dream.description %></h3>
+    </div>
+    <img src="https://unsplash.com/photos/U2eUlPEKIgU" alt="dream_image">
+    <p><%= link_to 'Edit', edit_dream_path(@dream)  %></p>
+    <p><%= link_to 'Back home', dreams_path %></p>
+
+
+    <div class="footer-show">
+      <h2><%= @dream.price%></h2>
+
+
+    </div>
+</div>
+
