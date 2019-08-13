@@ -3,7 +3,7 @@
   <div class="cards">
     <% @dreams.each do |d| %>
 
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(<%= image_path d.image_url%>)">
+      <div class="card" onclick="dream_path(d.id)" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(<%= image_path d.image_url%>)">
         <div class="card-content">
           <h3><%= d.title  %></h3>
           <h5><%= d.category %></h5>
