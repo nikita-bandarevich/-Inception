@@ -1,18 +1,17 @@
 <div class="container">
     <div>
       <h1> <%= @dream.title %></h1>
-      <p> <%= @dream.category %></p>
+      <h3> <%= @dream.category %></h3>
 
     </div>
     <img src="" alt="">
 
     <div>
-      <h1> <%= @dream.title %></h1>
-      <h3> <%= @dream.description %></h3>
+      <p> <%= @dream.description %></p>
     </div>
 
     <div class="footer-show">
-      <h2><%= @dream.price%>$</h2>
+      <h3><%= @dream.price%>$</h3>
     </div>
 
     <%= image_tag @dream.image_url%>
