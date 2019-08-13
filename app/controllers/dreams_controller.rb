@@ -45,6 +45,6 @@ class DreamsController < ApplicationController
   end
 
   def dream_strong_params
-    params.require(:dream).permit(:title, :price, :category, :description, :image_url)
+    params.require(:dream).permit(:title, :price, :category, :description, :photo)
   end
 end
