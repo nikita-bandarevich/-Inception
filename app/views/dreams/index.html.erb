@@ -3,12 +3,12 @@
   <div class="cards">
     <% @dreams.each do |d| %>
 
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(<%= image_path d.image_url%>)">
         <div class="card-content">
           <h3><%= d.title  %></h3>
           <h5><%= d.category %></h5>
           <h5>$<%= d.price %></h5>
-          <%= image_tag d.image_url %>
+
           <%= link_to 'Show', dream_path(d.id) %>
           <%= link_to 'Edit', edit_dream_path(d) %>
           <%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -18,3 +18,4 @@
     </div>
 <%= link_to 'New', new_dream_path %>
 </div>
+
