@@ -47,11 +47,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  text-align: center;
+  position: relative;
+
 }
 
-.span {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
+.card-content {
+  text-align: center;
+  margin: auto;
 }

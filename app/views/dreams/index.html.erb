@@ -3,10 +3,13 @@
   <div class="cards">
     <% @dreams.each do |d| %>
 
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        <span>
-        <%= d.title  %>
-        </span>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <div class="card-content">
+        <h3><%= d.title  %></h3>
+        <h5><%= d.category %></h5>
+        <h5>$<%= d.price %></h5>
+
+        </div>
       </div>
     <% end %>
     </div>
