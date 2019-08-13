@@ -1,14 +1,30 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: black;
+
+.sidebar_description {
+    transform: rotate(90deg) translate(43%);
+    transform-origin: center;
+    line-height: 1;
+    color: #fff;
+    padding-left: 20px;
+    position: relative;
+    top: -200px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+
+.sidebar {
+    justify-content: space-between;
+    background-color: #3c3c3c;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    padding: 23px 0;
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 90px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-
+#sideicons {
+  color: white;
 }
-
