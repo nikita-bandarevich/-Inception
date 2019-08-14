@@ -1,3 +1,8 @@
+<div class="back">
+  <%= link_to dreams_path, id: "back1" do %>
+    <i class="fas fa-long-arrow-alt-left" style="font-size: 33px"></i>
+  <% end %>
+</div>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
@@ -20,11 +25,11 @@
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
 
-        <div class="form-actions btn btn-primary" style="margin: 10px 41%;">
+        <div class="form-actions">
           <%= f.button :submit, "Log in" %>
         </div>
       <% end %>
-
+      <br>
       <div style= "text-align:center" >
         <%= render "devise/shared/links" %>
       </div>
