@@ -12,7 +12,7 @@
 
 .sidebar {
     justify-content: space-between;
-    background-color: #3c3c3c;
+    background-color: #111111;
     right: 0;
     top: 0;
     bottom: 0;
@@ -29,4 +29,8 @@
   height: auto;
   width: 85%;
   color: white;
+}
+
+.navbar-brand {
+  height: 35px;
 }

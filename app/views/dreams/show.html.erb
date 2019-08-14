@@ -1,20 +1,30 @@
  <% url = @dream.photo.file.nil? ? image_url("inception.png") : cl_image_path(@dream.photo) %>
  <div class="banner" style="background-image: url('<%= url %>')">
 </div>
-
-<div class="container">
+<br>
+<br>
+<div class="container cont" style="width: 950px">
+<%= link_to dreams_path, id: "back" do %>
+  <i class="fas fa-long-arrow-alt-left" style="font-size: 33px"></i>
+<% end %>
   <br>
     <div>
-      <h1><strong><%= @dream.title %></strong></h1>
+      <div class="d-flex justify-content-between">
+        <h1 style="color: #FA2EF5"><strong><%= @dream.title %></strong></h1>
+        <h1 style="font-size: 50px"><strong>$<%= @dream.price %></strong></h1>
+      </div>
       <h5> <%= @dream.category %></h5>
+      <br>
       <p> <%= @dream.description %></p>
     </div>
-    <div class="footer-show">
-      <h2><strong>$<%= @dream.price %></strong></h2>
+    <br>
+    <br>
+    <div class="d-flex">
+      <%= link_to 'Edit', edit_dream_path(@dream), class: "btn flex-fill" %>
+      <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn flex-fill" %>
     </div>
-    <p><%= link_to 'Edit', edit_dream_path(@dream) %></p>
-    <p><%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    <p><%= link_to 'Home', dreams_path %></p>
+  <br>
+  <br>
   <br>
 </div>
 

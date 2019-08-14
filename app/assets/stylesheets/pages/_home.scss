@@ -1,4 +1,26 @@
 // Specific CSS for your home-page
+
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+        clear: both;
+
+    }
+
+a {
+  color: #FA2EF5;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -41,17 +63,46 @@
 }
 
 .card {
+  border-style: solid;
+  border-color: #111111;
+  border-width: 1px;
   height: 220px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  position: relative;
-  border-radius: 5px;
+  border-radius: 0;
+}
 
+.card:hover {
+  box-shadow: 5px 5px 0 rgba(250, 46, 245, 1);
+  border-radius: 0;
 }
 
 .card-content {
   text-align: center;
   margin: auto;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 30px;
+  padding: 15px 30px;
+  background-color: #111111;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #FA2EF5;
+  color: white;
+}
+
+.cont {
+  position: relative
+}
+
+#back {
+  position:absolute;
+  left: -35px;
+  top: 30px;
 }
