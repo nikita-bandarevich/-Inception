@@ -14,7 +14,7 @@ Dream.create!(
   category: "Comedy",
   price: 20,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  remote_photo_url: "http://fr.web.img2.acsta.net/medias/nmedia/18/73/87/35/19446486.jpg"
+  remote_photo_url: "https://media.giphy.com/media/n8rFCqCYNCWhq/giphy.gif"
 )
 
 Dream.create!(
@@ -22,7 +22,7 @@ Dream.create!(
   category: "Science Fiction",
   price: 50,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  remote_photo_url: "https://img1.looper.com/img/gallery/why-we-never-got-to-see-an-inception-sequel/intro.jpg"
+  remote_photo_url: "https://media.giphy.com/media/muAhZqHWt0bv2/giphy.gif"
 )
 
 Dream.create!(
@@ -30,31 +30,31 @@ Dream.create!(
   category: "Sports",
   price: 100,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  remote_photo_url: "http://4.bp.blogspot.com/-79nPvyAI5UM/UMcR5xKZk4I/AAAAAAAAMck/0WJv4iIgpSI/s400/Invictus_Quotes_Wallpaper.jpg"
+  remote_photo_url: "https://media.giphy.com/media/xT9IgH0fInLY2LCDPa/giphy.gif"
 )
 
 Dream.create!(
-  title: "Le diner de Con",
+  title: "Le ",
   category: "Comedy",
   price: 53,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  image_url: "http://media.topito.com/wp-content/uploads/2015/06/diner-600x356.jpg"
+  remote_photo_url: "https://media.giphy.com/media/vrcoalzSZ7ivu/giphy.gif"
 )
 
 Dream.create!(
-  title: "Game of Thrones",
+  title: "Game",
   category: "Science Fiction",
   price: 5,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  image_url: "http://golem13.fr/wp-content/uploads/2019/02/GameofThrones8-20-posters.jpg"
+  remote_photo_url: "https://media.giphy.com/media/l2SpLXia7XemuOqRO/giphy.gif"
 )
 
 Dream.create!(
-  title: "Blue Montains States",
+  title: "Blue ",
   category: "Sports",
   price: 1000,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  image_url: "https://uploads.lebonbon.fr/source/2018/paris/ines/Blue_Mountain_State.jpg"
+  remote_photo_url: "https://media.giphy.com/media/l31GaPHIkAMTe/giphy.gif"
 )
 
 
@@ -63,7 +63,7 @@ Dream.create!(
   category: "Science Fiction",
   price: 20,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  image_url: "https://www.presse-citron.net/wordpress_prod/wp-content/uploads/2018/12/netflix-black-mirror.jpg"
+  remote_photo_url: "https://media.giphy.com/media/xTiTnpM6F3IBcgTlni/giphy.gif"
 )
 
 Dream.create!(
@@ -71,7 +71,7 @@ Dream.create!(
   category: "Comedy",
   price: 50,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyZmwNvuUO0viAvf0fsLc5xZMQUStBRpi667Jfu8rrRW_N-fd1Xg"
+  remote_photo_url: "https://media.giphy.com/media/26hiu2HzJGIdUN1Qc/giphy.gif"
 )
 
 Dream.create!(
@@ -79,6 +79,6 @@ Dream.create!(
   category: "History",
   price: 100,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  image_url: "https://cadenaser00.epimg.net/ser/imagenes/2018/11/02/la_script/1541142813_407596_1541145582_noticia_normal.jpg"
+  remote_photo_url: "https://media.giphy.com/media/117Q7xzQUHm69W/giphy.gif"
 )
 puts "finished"
