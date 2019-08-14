@@ -8,13 +8,13 @@
 
 #typewriter{
         font-size: 2em;
-        // margin: 0;
+        margin: 100px;
         font-family: "Courier New";
-
-        &:after{
-            content: "|";
-            animation: blink 500ms linear infinite alternate;
-        }
+        color: white;
+        // &:after{
+        //     content: "|";
+        //     animation: blink 5000ms linear infinite alternate;
+        // }
 }
 
 @-webkit-keyframes blink{
