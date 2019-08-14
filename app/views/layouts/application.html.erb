@@ -14,8 +14,13 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <%= yield %>
-    <%= render "shared/navbar" %>
+
+    <% unless current_page?("http://localhost:3000/")  %>
+      <%= render "shared/navbar" %>
+    <% end %>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
 
