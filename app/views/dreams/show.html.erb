@@ -10,18 +10,18 @@
   <br>
     <div>
       <div class="d-flex justify-content-between">
-        <h1 style="color: #FA2EF5"><strong><%= @dream.title %></strong></h1>
+        <h1 style="color: #FA2EF5; font-weight: lighter;"><strong><%= @dream.title %></strong></h1>
         <h1 style="font-size: 50px"><strong>$<%= @dream.price %></strong></h1>
       </div>
-      <h5> <%= @dream.category %></h5>
+      <h5 style="font-weight: bold;"> <%= @dream.category %></h5>
       <br>
       <p> <%= @dream.description %></p>
     </div>
     <br>
     <br>
     <div class="d-flex">
-      <%= link_to 'Edit', edit_dream_path(@dream), class: "btn flex-fill" %>
-      <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn flex-fill" %>
+      <%= link_to 'Edit', edit_dream_path(@dream), class: "btn" %>
+      <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
     </div>
   <br>
   <br>
