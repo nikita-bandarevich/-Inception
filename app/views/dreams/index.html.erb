@@ -19,8 +19,11 @@
       <% end %>
     </div>
     <br>
-
-    <%= link_to 'Create dream', new_dream_path, class: "btn" %>
+    <% if escapist_signed_in? %>
+      <%= link_to 'Create dream', new_dream_path, class: "btn" %>
+    <% else %>
+      <%= link_to 'Create dream', new_escapist_session_path, class: "btn" %>
+    <% end %>
 </div>
 <br>
 <br>
