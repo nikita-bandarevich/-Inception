@@ -10,15 +10,10 @@
     </div>
     <div class="nav-link ">
       <% if escapist_signed_in? %>
-        <%= link_to image_tag("home_icon.png", :class => 'sideicons mx-auto d-block'), destroy_escapist_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} %>
+        <%= link_to image_tag("unlocked.png", :class => 'sideicons mx-auto d-block'), destroy_escapist_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} %>
       <% else %>
-        <%= link_to image_tag("home_icon.png", :class => 'sideicons mx-auto d-block'), new_escapist_session_path %>
+        <%= link_to image_tag("locked.png", :class => 'sideicons mx-auto d-block'), new_escapist_session_path %>
       <% end %>
-    </div>
-
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
     </div>
   </div>
 
