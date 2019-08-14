@@ -18,7 +18,7 @@
 
     <%= yield %>
 
-    <% unless current_page?("http://localhost:3000/")  %>
+    <% unless current_page?("http://localhost:3000/") || current_page?("https://inceptionapp.herokuapp.com/")  %>
       <%= render "shared/navbar" %>
     <% end %>
 
