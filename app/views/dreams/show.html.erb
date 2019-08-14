@@ -13,14 +13,20 @@
         <h1 style="color: #FA2EF5"><strong><%= @dream.title %></strong></h1>
         <h1 style="font-size: 50px"><strong>$<%= @dream.price %></strong></h1>
       </div>
+
+      <%= link_to 'Dream', new_dream_neurolink_path(@dream.id), class: "btn flex-fill mb-3" %>
+      <br>
+
       <h5> <%= @dream.category %></h5>
       <br>
       <p> <%= @dream.description %></p>
     </div>
     <br>
     <br>
+
     <div class="d-flex">
       <%= link_to 'Edit', edit_dream_path(@dream), class: "btn flex-fill" %>
+      <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn flex-fill" %>
       <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn flex-fill" %>
     </div>
   <br>
