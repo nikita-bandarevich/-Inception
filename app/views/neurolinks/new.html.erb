@@ -1,2 +1,17 @@
 <h1>Neurolinks#new</h1>
 <p>Find me in app/views/neurolinks/new.html.erb</p>
+
+<div class="container">
+<h1>New Dream</h1>
+
+
+<%= render 'form', dream: @dream %>
+
+<br>
+
+<div class="form-group mx-auto" style="width: 200px;"" >
+<%= link_to 'Show', dream_path(@dream) , class: "btn btn-secondary"%>
+<%= link_to 'Back', dreams_path ,  class: "btn btn-secondary"%>
+</div>
+
+</div>
