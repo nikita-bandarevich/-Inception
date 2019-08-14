@@ -20,8 +20,17 @@
     <br>
     <br>
     <div class="d-flex">
-      <%= link_to 'Edit', edit_dream_path(@dream), class: "btn" %>
-      <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+      <% if escapist_signed_in? %>
+        <%= link_to 'Edit', edit_dream_path(@dream), class: "btn flex-fill" %>
+      <% else %>
+        <%= link_to 'Edit', new_escapist_session_path, class: "btn flex-fill" %>
+      <% end %>
+
+      <% if escapist_signed_in? %>
+        <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn flex-fill" %>
+      <% else %>
+        <%= link_to 'Destroy', new_escapist_session_path, class: "btn flex-fill" %>
+      <% end %>
     </div>
   <br>
   <br>
