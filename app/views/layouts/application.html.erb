@@ -14,12 +14,13 @@
   </head>
   <body>
     <% if notice %>
-    <p class="notice"><%= notice %></p>
+      <p class="notice"><%= notice %></p>
     <% end %>
     <p class="alert"><%= alert %></p>
 
-    <%= yield %>
 
+    <%= yield %>
+    <%= render "shared/footer" %>
     <% unless current_page?("http://localhost:3000/") || current_page?("https://inceptionapp.herokuapp.com/")  %>
       <%= render "shared/navbar" %>
     <% end %>

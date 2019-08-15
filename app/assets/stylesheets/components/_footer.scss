@@ -1,26 +1,102 @@
-.footer {
-  background: #F4F4F4;
-  display: flex;
-  align-item: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+// .footer {
+//   background: #FA2EF5;
+//   display: flex;
+//   align-item: center;
+//   justify-content: space-between;
+//   height: auto;
+//   padding: 6px 20px;
+//   color: rgba(0,0,0,0.3);
+//   overflow: hidden;
+
+//   transition: transform .4s ease;
+// }
+
+// .slidein {
+
+//   width: 3480.88px;
+//   animation-duration: 3s;
+//   animation-name: slidein;
+//   animation-iteration-count: infinite;
+// }
+
+// @keyframes slidein {
+//   from {
+//     margin-left:0px;
+//   }
+
+//   to {
+//     margin-left:100%;
+//   }
+// }
+
+// .marquee-wrap, .read-button {
+//     float: left;
+//     height: 32px;
+//     position: relative;
+// }
+
+// .marquee-wrap {
+//     overflow: hidden;
+//     width: calc(100% - 43px - 115px);
+// }
+
+// .wrap {
+//     float: left;
+//         overflow: hidden;
+//     white-space: nowrap;
+//     position: relative;
+// }
+
+// .footer-links {
+//   display: flex;
+//   align-items: center;
+// }
+// .footer-links a {
+//   color: black;
+//   opacity: 0.15;
+//   text-decoration: none;
+//   font-size: 24px;
+//   padding: 0px 10px;
+// }
+// .footer-links a:hover {
+//   opacity: 1;
+// }
+// .footer .fa-heart {
+//   color: #D23333;
+// }
+
+
+#maindiv{
+  border: 2px solid black;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.footer-links {
-  display: flex;
-  align-items: center;
+
+#div1 {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
 }
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+
+#div2 {
+  display: inline-block;
+  animation: marquee2 10s linear infinite;
+  animation-delay: 5s;
 }
-.footer-links a:hover {
-  opacity: 1;
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
-.footer .fa-heart {
-  color: #D23333;
+
+@keyframes marquee2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
 }
