@@ -8,13 +8,26 @@ const initSlider = () => {
 
       tns({
         container: element,
+        loop: true,
+        items: 1,
         slideBy: 'page',
-        autoplay: true,
+        nav: false,
         edgePadding: 50,
-        fixedWidth: 340,
-        swipeAngle: false,
+        gutter: 10,
+        autoplay: true,
         speed: 400,
-        arrowKeys: true
+        autoplayButtonOutput: false,
+        lazyload: true,
+        controlsContainer: "#customize-controls",
+        responsive: {
+            640: {
+                items: 2,
+            },
+
+            768: {
+                items: 3,
+            }
+        }
       });
     });
   }
