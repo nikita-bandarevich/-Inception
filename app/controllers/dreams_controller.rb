@@ -7,6 +7,7 @@ class DreamsController < ApplicationController
 
   def show
     @neurolink = Neurolink.new
+    # testing
   end
 
   def new
