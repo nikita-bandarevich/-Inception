@@ -2,6 +2,18 @@
 <div class="container">
   <br>
   <br>
+  <!-- [search form] -->
+  <%= form_tag dreams_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a dream"
+    %>
+  <% end %>
+  <!-- the list of movies -->
+  <br>
+  <br>
+
   <h1 style="font-size: 33px;">Choose your dream:</h1>
   <br>
   <div class="cards">
