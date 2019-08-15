@@ -1,4 +1,8 @@
 import "bootstrap";
-import { setupTypewriter } from '../components/_typing_animation';
+import "tiny-slider/dist/tiny-slider.css";
+import { initSlider } from '../plugins/tns';
+import { initTyper } from '../components/_typing_animation';
 
-setuptypewriter();
+initSlider();
+initTyper();
+
