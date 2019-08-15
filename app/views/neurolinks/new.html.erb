@@ -1,4 +1,39 @@
-<h1>Neurolinks#new</h1>
-<p>Find me in app/views/neurolinks/new.html.erb</p>
+
+
+<div class="container">
+  <div class="image">
+  <% url = @dream.photo.file.nil? ? image_url("inception.png") : cl_image_path(@dream.photo) %>
+   <div class="banner" style="background-image: url('<%= url %>')">
+  </div>
+  </div>
+
+
+
+  <div class="container cont" style="width: 950px">
+  <%= link_to dreams_path, id: "back" do %>
+    <i class="fas fa-long-arrow-alt-left" style="font-size: 33px"></i>
+  <% end %>
+    <br>
+      <div>
+        <div class="d-flex justify-content-between">
+          <h1 style="color: #FA2EF5"><strong><%= @dream.title %></strong></h1>
+          <h1 style="font-size: 50px"><strong>$<%= @dream.price %></strong></h1>
+        </div>
+
+
+
+        <h5> <%= @dream.category %></h5>
+        <br>
+        <p> <%= @dream.description %></p>
+</div>
+
+
+
+
+
+<%= link_to 'Start to Dream', new_dream_neurolink_path(@dream.id), class: "btn flex-fill mb-3" %>
+      <br>
+
+
 
 
