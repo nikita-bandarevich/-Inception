@@ -1,9 +1,13 @@
+<div class="back">
+  <%= link_to dreams_path, id: "back1" do %>
+    <i class="fas fa-long-arrow-alt-left" style="font-size: 33px"></i>
+  <% end %>
+</div>
+<br>
 <div class="container">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <%= render 'form', dream: @dream %>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <%= render 'form', dream: @dream %>
+    </div>
+  </div>
 </div>
