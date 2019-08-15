@@ -11,7 +11,6 @@ class DreamsController < ApplicationController
   end
 
   def show
-    @neurolink = Neurolink.new
   end
 
   def new
