@@ -19,23 +19,41 @@
     </div>
     <br>
     <br>
-    <div class="d-flex">
-      <% if escapist_signed_in? %>
-        <%= link_to 'Edit', edit_dream_path(@dream), class: "btn flex-fill" %>
-      <% else %>
-        <%= link_to 'Edit', new_escapist_session_path, class: "btn flex-fill" %>
-      <% end %>
+    <!-- <div class="w"> -->
+      <%# if escapist_signed_in? %>
+        <%#= link_to 'Edit', edit_dream_path(@dream), class: "btn flex-fill" %>
+      <%# else %>
+        <%#= link_to 'Edit', new_escapist_session_path, class: "btn flex-fill" %>
+      <%# end %>
 
-      <% if escapist_signed_in? %>
-        <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn flex-fill" %>
-      <% else %>
-        <%= link_to 'Destroy', new_escapist_session_path, class: "btn flex-fill" %>
-      <% end %>
+      <%# if escapist_signed_in? %>
+        <%#= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn flex-fill" %>
+      <%# else %>
+        <%#= link_to 'Destroy', new_escapist_session_path, class: "btn flex-fill" %>
+      <%# end %>
+    <!-- <div class="container"> -->
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+
+
+    <%= simple_form_for [@dream, @neurolink] do |f| %>
+     <!--  <div class="d-flex justify-content-between"> -->
+        <%= f.input :date, as: :date, required: false, input_html: {class: "datepicker flex-fill"} %>
+        <br>
+        <%= f.button :submit, "Dream", class: "btn flex-fill" %>
+
+        </div>
+    <% end %>
+ <!--  </div> -->
+  </div>
+
+
     </div>
   <br>
   <br>
   <br>
 </div>
+
+
 
 
 
