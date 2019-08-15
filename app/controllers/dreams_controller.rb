@@ -2,11 +2,15 @@ class DreamsController < ApplicationController
   before_action :set_dream, only: [:show, :edit, :update, :destroy]
 
   def index
-    @dreams = Dream.all
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR category ILIKE :query"
+      @dreams = Dream.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @dreams = Dream.all
+    end
   end
 
   def show
-    @neurolink = Neurolink.new
   end
 
   def new
