@@ -1,3 +1,5 @@
+
+
 <div class="container">
   <div class="image">
   <% url = @dream.photo.file.nil? ? image_url("inception.png") : cl_image_path(@dream.photo) %>
@@ -31,7 +33,6 @@
 
 <%= link_to 'Start to Dream', new_dream_neurolink_path(@dream.id), class: "btn flex-fill mb-3" %>
       <br>
-
 
 
 
