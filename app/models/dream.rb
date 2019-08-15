@@ -3,7 +3,7 @@ class Dream < ApplicationRecord
 
   has_many :escapists, through: :neurolinks
 
-  validates :title, presence: true
-  validates :category, presence: true
+  validates :title, uniqueness: true, presence: true, length: { maximum: 13 }
+  validates :category, presence: true, inclusion: { in: ["Drama", "Comedy", "Thriller", "Action", "Fantastic", "Horror", "Science Fiction", "Polar", "Period film", "Animated film", "Storytelling", "Western", "Parody", "Musical comedy", "Documentary"] }
   validates :price, presence: true
 end
