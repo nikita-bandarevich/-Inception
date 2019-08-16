@@ -2,36 +2,27 @@ import { tns } from "tiny-slider/src/tiny-slider";
 
 
 const initSlider = () => {
-  const elements = document.querySelectorAll('.my-slider');
-  const controls = document.querySelectorAll('#customize-controls');
-  let i = 0
-  if (elements) {
-    elements.forEach((element) => {
+  // const elements = document.querySelectorAll('.my-slider');
+  // const controls = document.querySelectorAll('#customize-controls');
+
+  const element = document.querySelector('.my-slider');
+
+  // let i = 0
+  if (element) {
+    // elements.forEach((element) => {
 
       tns({
         container: element,
-        loop: true,
-        items: 1,
-        slideBy: 'page',
-        nav: false,
-        edgePadding: 50,
-        gutter: 10,
+        items: 5,
+        autoWidth: true,
+        fixedWidth: 400,
+        swipeAngle: false,
         speed: 400,
-        autoplayButtonOutput: false,
-        lazyload: true,
-        controlsContainer: controls[i],
-        responsive: {
-            640: {
-                items: 2,
-            },
-
-            768: {
-                items: 3,
-            }
-        }
+        gutter: 10,
+        startIndex: 2
       });
-      i++;
-    });
+      // i++;
+    // });
   }
 }
 

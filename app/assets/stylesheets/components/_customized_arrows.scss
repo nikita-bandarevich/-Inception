@@ -1,5 +1,7 @@
-ul.controls.customized-arrows { background-color: #EEE; text-align: center; margin-top: 15px; }
+ul.controls.customized-arrows {  text-align: center; margin-top: 15px; }
+
 ul.controls.customized-arrows li { display: inline-block; }
-.controls.customized-arrows [aria-controls] { font-size: 30px; margin: 0 5px; line-height: 1; -moz-transition: color 0.3s ease-out; -webkit-transition: color 0.3s ease-out; transition: color 0.3s ease-out; }
+
+.controls.customized-arrows [aria-controls] {  margin: 0 1px; line-height: 1;  transition: color 0.3s ease-out; }
 .controls.customized-arrows [aria-controls]:hover { cursor: pointer; color: red; }
 .controls.customized-arrows [aria-disabled]{color: inherit; opacity: 0.4; cursor:not-allowed!important}

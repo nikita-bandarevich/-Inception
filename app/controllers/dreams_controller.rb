@@ -20,7 +20,7 @@ class DreamsController < ApplicationController
 
   def create
     @dream = Dream.new(dream_strong_params)
-    @dream.escapist_id = current_escapist
+    @dream.escapist = current_escapist
     if @dream.save
       redirect_to dashboard_path
     else
