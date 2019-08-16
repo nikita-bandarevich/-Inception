@@ -20,6 +20,7 @@
     <br>
     <br>
 
+
   <% if @dream.escapist == current_escapist %>
     <div class="d-flex">
       <%= link_to 'Edit', edit_dream_path(@dream), class: "btn" %>
@@ -37,11 +38,13 @@
         <% else %>
           <%= link_to 'Dream', new_escapist_session_path, class: "btn flex-fill" %>
         <% end %>
+
       <% end %>
     <% end %>
     <!--  </div> -->
 
   </div>
+
   <br>
   <br>
   <br>

@@ -1,8 +1,13 @@
+<div class="back">
+  <%= link_to dreams_path, id: "back1" do %>
+    <i class="fas fa-long-arrow-alt-left" style="font-size: 33px"></i>
+  <% end %>
+</div>
+
+<div style="margin-right: 90px;">
 <div class="container" id="dash">
-  <br>
-  <br>
-  <br>
-  <h1 id="dreamboard" style="font-weight: bold">Dreamboard</h1>
+
+  <h1 id="dreamboard" style="font-weight: bold; color: #FA2EF5;">Dreamboard</h1>
  <%= link_to "Sign out", destroy_escapist_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} %>
   <br>
   <br>
@@ -25,7 +30,7 @@
         <% @neurolinks.each do |n| %>
           <% url = n.dream.photo.file.nil? ? image_url("brain.svg") : cl_image_path(n.dream.photo) %>
           <%= link_to '#' do %>
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://il3.picdn.net/shutterstock/videos/2313281/thumb/1.jpg)">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://il3.picdn.net/shutterstock/videos/2313281/thumb/1.jpg')">
               <div class="card-content">
                 <h1><strong><%= n.dream.title  %></strong> </h1>
                 <p><%= n.date %></p>
@@ -39,12 +44,12 @@
     </div>
   <br>
   <br>
+
+
   <br>
-
-  <br>
-
-
-  <div >
+  <h2 style="font-size: 21px">Dreams</h2>
+ <br>
+  <div class="cards">
       <% if @dreams.nil? %>
 
         <div class="card" style="background-image: linear-gradient((255,255,255,0.7), (255,255,255,0.7)), url(https://il3.picdn.net/shutterstock/videos/2313281/thumb/1.jpg)">
@@ -55,41 +60,27 @@
 
       <% else %>
 
-          <!-- <h2 style="font-size: 21px">Your Dreams</h2> -->
-      <!--     <div class="d-flex justify-content-between">
-
-            <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
-              <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
-                  <i class="fas fa-angle-left fa-5x"></i>
-              </li>
-              <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
-                  <i class="fas fa-angle-right fa-5x"></i>
-              </li>
-              </ul>
-          </div> -->
-
-          <div class="my-slider">
-            <% @dreams.each_with_index do |d, i| %>
-              <% url = d.photo.file.nil? ? image_url("brain.svg") : cl_image_path(d.photo) %>
-                <%= link_to dream_path(d.id) do %>
-                  <div class="card " style=" background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('<%= url %>')">
-                    <div class="card-content">
-                      <h1><strong><%= d.title  %></strong> </h1>
-                      <p style="font-size: 33px">$<%= d.price %></p>
-                    </div>
-                  </div>
-                <% end %>
-            <% end %>
-          </div>
 
 
+        <% @dreams.each do |d| %>
+          <% url = d.photo.file.nil? ? image_url("brain.svg") : cl_image_path(d.photo) %>
+          <%= link_to dream_path(d.id) do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('<% url %>')">
+              <div class="card-content">
+                <h1><strong><%= d.title  %></strong> </h1>
+
+                <p style="font-size: 33px">$<%= d.price %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
       <% end %>
 
   </div>
 
 
 
-    <br><br><br>
+    <br><br>
 
       <% if escapist_signed_in? %>
         <%= link_to 'Create dream', new_dream_path, class: "btn" %>
@@ -98,3 +89,6 @@
       <% end %>
 
 </div>
+</div>
+
+<br><br><br><br>
