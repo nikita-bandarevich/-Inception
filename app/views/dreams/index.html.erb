@@ -4,7 +4,6 @@
   <br>
   <h1 style="font-size: 33px;">Choose your dream:</h1>
   <br>
-  <div class="cards">
     <% @dreams.each do |d| %>
       <% url = d.photo.file.nil? ? image_url("inception.png") : cl_image_path(d.photo) %>
         <%= link_to dream_path(d.id) do %>
@@ -15,15 +14,15 @@
             <p style="font-size: 33px">$<%= d.price %></p>
           </div>
         </div>
-        <% end %>
       <% end %>
-    </div>
-    <br>
-    <% if escapist_signed_in? %>
-      <%= link_to 'Create dream', new_dream_path, class: "btn" %>
-    <% else %>
-      <%= link_to 'Create dream', new_escapist_session_path, class: "btn" %>
     <% end %>
+  </div>
+  <br>
+  <% if escapist_signed_in? %>
+    <%= link_to 'Create dream', new_dream_path, class: "btn" %>
+  <% else %>
+    <%= link_to 'Create dream', new_escapist_session_path, class: "btn" %>
+  <% end %>
 </div>
 <br>
 <br>

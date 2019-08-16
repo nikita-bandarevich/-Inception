@@ -1,25 +1,52 @@
 // Specific CSS for your home-page
 
-* {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent;
-        clear: both;
+.relative {
+  position: relative;
+  right: -900px;
+  top: 75px;
+}
 
-    }
+// #dreamboard {
+//   position: absolute;
+//   left: 210px;
+//   top: 175px;
+// }
 
 a {
   color: #FA2EF5;
 }
 
 a:hover {
+  color: #111111;
   text-decoration: none;
+
 }
 
+
+// .scrolling-wrapper {
+//   overflow-x: scroll;
+//   overflow-y: hidden;
+//   white-space: nowrap;
+
+//   .scrolling-card {
+//     display: inline-block;
+//     border-style: solid;
+//     border-color: #111111;
+//     border-width: 1px;
+//     height: 220px;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     color: white;
+//     border-radius: 0;
+//   }
+
+//   .scrolling-card:hover {
+//   box-shadow: 5px 5px 0 rgba(250, 46, 245, 1);
+//   border-radius: 0;
+//   transform: translate(-5px, -5px);
+// }
+// }
 
 .cards {
   display: grid;
@@ -64,7 +91,7 @@ a:hover {
 
 .card {
   border-style: solid;
-  border-color: #111111;
+  border-color: #CCCCCC;
   border-width: 1px;
   height: 220px;
   background-position: center;
@@ -83,6 +110,7 @@ a:hover {
 .card-content {
   text-align: center;
   margin: auto;
+  padding: 15px;
 }
 
 .btn {
@@ -104,7 +132,7 @@ a:hover {
 }
 
 #back {
-  position:absolute;
+  position: absolute;
   left: -35px;
   top: 30px;
 }

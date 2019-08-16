@@ -1,4 +1,7 @@
 import "bootstrap";
 import { setupTypewriter } from '../components/_typing_animation';
 
-setuptypewriter();
+const typeWriter = document.getElementById('typewriter');
+if (typewriter) {
+  setuptypewriter();
+}
