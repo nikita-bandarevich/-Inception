@@ -13,42 +13,6 @@
       %>
     <% end %>
 
-    <br>
-    <br>
-
-    <% @dreams.group_by { |dream| dream[:category] }.each do |category, dreams| %>
-  <div class="d-flex justify-content-between">
-    <h2 class="mb-0"><%= category %></h2>
-    <ul class="controls align-bottom" id="customize-controls" aria-label="Carousel Navigation" tabindex="0" style="list-style: none;">
-      <li class="prev mr-1" data-controls="prev" aria-controls="customize" tabindex="-1">
-        <i class="fas fa-angle-left"></i>
-      </li>
-      <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
-        <i class="fas fa-angle-right"></i>
-      </li>
-    </ul>
-  </div>
-
-      <div class="my-slider">
-      <% dreams.each_with_index do |p, i| %>
-        <% url = p.photo.file.nil? ? image_url("inception.png") : cl_image_path(p.photo) %>
-        <%= link_to dream_path(p.id) do %>
-        <div class="card " style=" background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('<%= url %>')">
-            <div class="card-content">
-              <h1><strong><%= p.title  %></strong> </h1>
-              <p><%= p.category %></p>
-              <p style="font-size: 33px">$<%= p.price %></p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <% end %>
-      <% end %>
-      </div>
-    <% end %>
-
-
-
 
 
     <!-- the list of movies -->
@@ -57,29 +21,24 @@
 
 
 
-  <!--   <div class="cards">
-      <#% @dreams.each do |d| %>
-        <#% url = d.photo.file.nil? ? image_url("inception.png") : cl_image_path(d.photo) %>
-          <#%= link_to dream_path(d.id) do %>
-          <div class="card" style=" background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('<#%= url %>')">
+    <div class="cards">
+      <% @dreams.each do |d| %>
+        <% url = d.photo.file.nil? ? image_url("inception.png") : cl_image_path(d.photo) %>
+          <%= link_to dream_path(d.id) do %>
+          <div class="card" style=" background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('<%= url %>')">
             <div class="card-content">
-              <h1><strong><#%= d.title  %></strong> </h1>
-              <p><#%= d.category %></p>
-              <p style="font-size: 33px">$<#%= d.price %></p>
+              <h1><strong><%= d.title  %></strong> </h1>
+              <p><%= d.category %></p>
+              <p style="font-size: 33px">$<%= d.price %></p>
             </div>
           </div>
-          <#% end %>
-        <#% end %>
+          <% end %>
+        <% end %>
       </div>
-      <br> -->
+      <br>
 
-  <!-- </div> -->
+  </div>
 
-      <% if escapist_signed_in? %>
-        <%= link_to 'Create dream', new_dream_path, class: "btn" %>
-      <% else %>
-        <%= link_to 'Create dream', new_escapist_session_path, class: "btn" %>
-      <% end %>
   <br>
   <br>
   <br>

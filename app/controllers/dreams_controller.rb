@@ -22,7 +22,7 @@ class DreamsController < ApplicationController
     @dream = Dream.new(dream_strong_params)
     @dream.escapist_id = current_escapist
     if @dream.save
-      redirect_to dreams_path
+      redirect_to dashboard_path
     else
       render :new
     end
