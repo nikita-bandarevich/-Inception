@@ -1,8 +1,13 @@
+<div class="back">
+  <%= link_to dreams_path, id: "back1" do %>
+    <i class="fas fa-long-arrow-alt-left" style="font-size: 33px"></i>
+  <% end %>
+</div>
+
+<div style="margin-right: 90px;">
 <div class="container" id="dash">
-  <br>
-  <br>
-  <br>
-  <h1 id="dreamboard" style="font-weight: bold">Dreamboard</h1>
+
+  <h1 id="dreamboard" style="font-weight: bold; color: #FA2EF5;">Dreamboard</h1>
  <%= link_to "Sign out", destroy_escapist_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} %>
   <br>
   <br>
@@ -39,11 +44,11 @@
     </div>
   <br>
   <br>
-  <br>
+
 
   <br>
   <h2 style="font-size: 21px">Dreams</h2>
-
+ <br>
   <div class="cards">
       <% if @dreams.nil? %>
 
@@ -75,7 +80,7 @@
 
 
 
-    <br><br><br>
+    <br><br>
 
       <% if escapist_signed_in? %>
         <%= link_to 'Create dream', new_dream_path, class: "btn" %>
@@ -84,3 +89,6 @@
       <% end %>
 
 </div>
+</div>
+
+<br><br><br><br>
