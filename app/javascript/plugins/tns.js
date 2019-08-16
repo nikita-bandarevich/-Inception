@@ -3,6 +3,8 @@ import { tns } from "tiny-slider/src/tiny-slider";
 
 const initSlider = () => {
   const elements = document.querySelectorAll('.my-slider');
+  const controls = document.querySelectorAll('#customize-controls');
+  let i = 0
   if (elements) {
     elements.forEach((element) => {
 
@@ -14,11 +16,10 @@ const initSlider = () => {
         nav: false,
         edgePadding: 50,
         gutter: 10,
-        autoplay: true,
         speed: 400,
         autoplayButtonOutput: false,
         lazyload: true,
-        controlsContainer: "#customize-controls",
+        controlsContainer: controls[i],
         responsive: {
             640: {
                 items: 2,
@@ -29,6 +30,7 @@ const initSlider = () => {
             }
         }
       });
+      i++;
     });
   }
 }
