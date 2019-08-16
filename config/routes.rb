@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :neurolinks, only: [:new, :create]
   end
 
-  devise_for :escapists, controllers: { registrations: "escapists/registrations" }, controllers: { sessions: "escapists/sessions" }
+  devise_for :escapists, controllers: { registrations: "escapists/registrations", sessions: "escapists/sessions" }
   root to: 'pages#home'
 
   get "neurolink/confirmation/:id", to: "neurolinks#confirmation", as: :neurolink_confirmation
