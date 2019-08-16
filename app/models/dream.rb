@@ -1,8 +1,6 @@
 class Dream < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
-
-
   belongs_to :escapist
 
   validates :title, uniqueness: true, presence: true, length: { maximum: 13 }

@@ -9,8 +9,14 @@
   </div>
 
   <div class="nav-link">
-    <%= link_to dashboard_path do %>
-      <% image_tag "home.svg", id: "profile" %>
+    <% if current_escapist.nil? %>
+      <%= link_to new_escapist_session_path do %>
+        <% image_tag "home.svg", id: "profile" %>
+      <% end %>
+    <% else %>
+      <%= link_to dashboard_path do %>
+        <% image_tag "home.svg", id: "profile" %>
+      <% end %>
     <% end %>
   </div>
 </div>
