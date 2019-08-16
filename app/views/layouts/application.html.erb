@@ -19,10 +19,12 @@
     <% end %>
     <p class="alert"><%= alert %></p>
 
-
+     <% if current_page?("http://localhost:3000/dreams/new") || current_page?("http://localhost:3000/escapists/sign_in") %>
+      <%= render "shared/footer" %>
+      <% end %>
     <%= yield %>
-    <%= render "shared/footer" %>
-    <% unless current_page?("http://localhost:3000/") || current_page?("https://inceptionapp.herokuapp.com/")  %>
+
+    <% unless current_page?("http://localhost:3000/") || current_page?("https://inceptionapp.herokuapp.com/") || current_page?("http://localhost:3000/dreams/new") || current_page?("http://localhost:3000/escapists/sign_in") %>
       <%= render "shared/navbar" %>
     <% end %>
 
