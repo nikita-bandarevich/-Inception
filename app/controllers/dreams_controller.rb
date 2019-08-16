@@ -1,5 +1,5 @@
 class DreamsController < ApplicationController
-  before_action :set_dream, only: [:show, :edit, :update, :destroy]
+  before_action :set_dream, only: [:show, :edit, :update, :destroy, :confirmation]
 
   def index
     if params[:query].present?
