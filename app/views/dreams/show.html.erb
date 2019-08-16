@@ -27,7 +27,7 @@
       <%= link_to 'Destroy', @dream, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
     </div>
   <% else %>
-    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <div class="form-wrapper" style="width: auto; margin: 0 auto;">
       <%= simple_form_for [@dream, @neurolink] do |f| %>
         <!--  <div class="d-flex justify-content-between"> -->
           <%= f.input :date, as: :date, required: false, input_html: {class: "datepicker flex-fill"} %>
