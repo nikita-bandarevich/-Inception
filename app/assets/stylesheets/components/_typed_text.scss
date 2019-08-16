@@ -17,6 +17,17 @@
         // }
 }
 
+#typewriter2{
+        font-size: 2em;
+        margin: 100px;
+        font-family: "Courier New";
+        color: black;
+        // &:after{
+        //     content: "|";
+        //     animation: blink 5000ms linear infinite alternate;
+        // }
+}
+
 @-webkit-keyframes blink{
     0%{opacity: 0;}
     100%{opacity: 1;}
