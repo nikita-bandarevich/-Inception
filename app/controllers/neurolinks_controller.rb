@@ -6,8 +6,11 @@ class NeurolinksController < ApplicationController
 
   def create
     @neurolink = Neurolink.new(neurolinks_strong_parameters)
-    @neurolink.dream = Dream.find(params[:dream_id])
-
+       @dream = Dream.find(params[:dream_id])
+    @neurolink = Neurolink.new(neurolinks_strong_parameters)
+    @neurolink.dream = @dream
+    @neurolink.price = @dream.price
+    @neurolink.escapist = current_escapist
     if @neurolink.save
       redirect_to dream_path(@neurolink.dream)
     else
@@ -18,6 +21,6 @@ class NeurolinksController < ApplicationController
   private
 
   def neurolinks_strong_parameters
-    params.require(:neurolink).permit(:start_date, :end_date, :escapist_id)
+    params.require(:neurolink).permit(:date, :escapist_id)
   end
 end

@@ -1,0 +1,21 @@
+.marquee.marquee-7:nth-of-type(odd) {
+    animation-direction: reverse;
+}
+
+element.style {
+    animation-delay: -40.383s;
+    width: 3480.88px;
+    animation-duration: 20s;
+}
+
+
+.marquee.marquee-7:nth-of-type(2n), .marquee.marquee-7:nth-of-type(odd) {
+    animation: marquee-7 10s linear infinite;
+}
+
+.marquee span {
+    color: #fff;
+    width: 50%;
+    float: left;
+    font-size: 18px;
+}
