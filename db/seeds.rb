@@ -81,11 +81,11 @@ Dream.create!(
 )
 
 Dream.create!(
-  title: "La Haine",
+  title: "Fuckedup",
   category: "Epic Dream",
   price: 50,
   description: "Un texte est une série orale ou écrite de mots perçus comme constituant un ensemble cohérent, porteur de sens et utilisant les structures propres à une langue (conjugaisons, construction et association des phrases…)1. Un texte n'a pas de longueur déterminée sauf dans le cas de poèmes à forme fixe comme le sonnet ou le haïku.",
-  remote_photo_url: "https://media.giphy.com/media/26hiu2HzJGIdUN1Qc/giphy.gif",
+  remote_photo_url: "https://media.giphy.com/media/zsp6JrZQf3rPy/giphy.gif",
   escapist: escapist
 )
 
