@@ -1,0 +1,38 @@
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+  <% @dreams.group_by { |dream| dream[:category] }.each do |category, dreams| %>
+  <h2><%= category %></h2>
+  # etc.
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex">
+          <% dreams.each_with_index do |p, i| %>
+            <div class="span3">
+              <a href="#"><img src=<%= cl_image_path(.photo) %> alt="first image" class="d-block w-100 img-responsive"></a>
+            </div>
+          <% end %>
+        </div>
+
+    </div>
+      </div>
+      <div class="carousel-item">
+        <div>
+          <% dreams.each_with_index do |p, i| %>
+            <div class="span3">
+                <a href="#"><img src=<%= cl_image_path(.photo) %> alt="first image" class="d-block w-100 img-responsive"></a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

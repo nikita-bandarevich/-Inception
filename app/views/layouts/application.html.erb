@@ -8,7 +8,10 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+
   </head>
   <body>
     <% if notice %>
@@ -16,8 +19,9 @@
     <% end %>
     <p class="alert"><%= alert %></p>
 
-    <%= yield %>
 
+    <%= yield %>
+    <%= render "shared/footer" %>
     <% unless current_page?("http://localhost:3000/") || current_page?("https://inceptionapp.herokuapp.com/")  %>
       <%= render "shared/navbar" %>
     <% end %>
