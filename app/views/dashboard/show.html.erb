@@ -1,0 +1,66 @@
+<div class="container" id="dash">
+  <br>
+  <br>
+  <br>
+  <h1 id="dreamboard" style="font-weight: bold">Dreamboard</h1>
+ <%= link_to "Sign out", destroy_escapist_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} %>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2 style="font-size: 21px">Neurolinks</h2>
+  <br>
+    <div class="cards">
+      <% if @neurolinks.nil? %>
+        <div class="card" style="background-image: linear-gradient((255,255,255,0.7), (255,255,255,0.7)), url(https://il3.picdn.net/shutterstock/videos/2313281/thumb/1.jpg)">
+          <div class="card-content">
+            <p style="color: #CCCCCC; font-size: 33px">You have no Neurolinks yet.</p>
+          </div>
+        </div>
+      <% else %>
+        <% @neurolinks.each do |n| %>
+          <% url = n.dream.photo.file.nil? ? image_url("brain.svg") : cl_image_path(n.dream.photo) %>
+          <%= link_to '#' do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://il3.picdn.net/shutterstock/videos/2313281/thumb/1.jpg)">
+              <div class="card-content">
+                <h1><strong><%= n.dream.title  %></strong> </h1>
+                <p><%= n.dream.date %></p>
+                <p style="font-size: 33px">$<%= n.dream.price %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  <br>
+  <br>
+  <br>
+  <h2 style="font-size: 21px">Your Dreams</h2>
+  <br>
+  <div class="cards">
+      <% if @dreams.nil? %>
+        <div class="card" style="background-image: linear-gradient((255,255,255,0.7), (255,255,255,0.7)), url(https://il3.picdn.net/shutterstock/videos/2313281/thumb/1.jpg)">
+          <div class="card-content">
+            <p style="color: #CCCCCC; font-size: 33px;">You have no dreams yet.</p>
+          </div>
+        </div>
+      <% else %>
+        <% @dreams.each do |d| %>
+          <% url = d.photo.file.nil? ? image_url("brain.svg") : cl_image_path(d.photo) %>
+          <%= link_to '#' do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://il3.picdn.net/shutterstock/videos/2313281/thumb/1.jpg)">
+              <div class="card-content">
+                <h1><strong><%= d.title  %></strong> </h1>
+                <p><%= d.date %></p>
+                <p style="font-size: 33px">$<%= d.price %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+    <br><br><br>
+
+
+
+</div>

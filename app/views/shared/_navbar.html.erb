@@ -4,23 +4,16 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="d-flex flex-column collapse navbar-collapse" id="navbarSupportedContent">
-    <div class="nav-link ">
-      <%= link_to image_tag("home_icon.png", :class => 'sideicons mx-auto d-block'), dreams_path %>
-    </div>
-    <div class="nav-link ">
-      <% if escapist_signed_in? %>
-        <%= link_to image_tag("unlocked.png", :class => 'sideicons mx-auto d-block'), destroy_escapist_session_path, method: :delete, data: {confirm: "Are you sure you want to log out?"} %>
-      <% else %>
-        <%= link_to image_tag("locked.png", :class => 'sideicons mx-auto d-block'), new_escapist_session_path %>
-      <% end %>
-    </div>
+  <div class="sidebar_description">
+    <%= link_to image_tag("inception.svg", :class => 'navbar-brand'), dreams_path %>
   </div>
 
-  <div class="sidebar_description">
-    <%= image_tag "inception.svg", class: "navbar-brand" %>
+  <div class="nav-link">
+    <%= link_to dashboard_path do %>
+      <% image_tag "home.svg", id: "profile" %>
+    <% end %>
   </div>
-</aside>
+</div>
 
 
 <!-- author thanks for the icon -->

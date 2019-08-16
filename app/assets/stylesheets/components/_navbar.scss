@@ -6,7 +6,11 @@
     color: #fff;
     padding-left: 20px;
     position: relative;
-    top: -200px;
+}
+
+.links {
+  position: absolute;
+  top: 30px;
 }
 
 
@@ -22,12 +26,19 @@
     flex-direction: column;
     display: flex;
     align-items: center;
-    width: 90px;
+    width: 75px;
 }
 
-.sideicons {
-  height: auto;
-  width: 85%;
+.nav-link img {
+  max-width: 40px;
+}
+
+#profile {
+  width: 100%
+}
+
+.dash {
+  width: 21px;
   color: white;
 }
 
